@@ -17,6 +17,11 @@ let min=Number(urlParams.get("min"));
 let on=urlParams.get("on");
 let usedChats=[];
 
+setInterval(function(){
+    if(document.getElementsByClassName("uArJ5e UQuaGc Y5sE8d uyXBBb xKiqt")[0]!==undefined){
+        document.getElementsByClassName("uArJ5e UQuaGc Y5sE8d uyXBBb xKiqt")[0].click();
+    }
+},1000)
 
 function getCount(){
     if(document.getElementsByClassName("wnPUne N0PJ8e")[0]!==undefined){
@@ -90,7 +95,9 @@ let check=setInterval(function(){
 
 function C4H(){
     botSay(phrase,Number(wait*1000));
-    leave(min);
+    setTimeout(function(){
+        leave(min);
+    },30000)
     if(acrState!==null){
         acr();
     }
