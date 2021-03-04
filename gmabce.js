@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google Meet Attendance Bot Code Executor
 // @namespace    http://tampermonkey.net/
-// @version      2.0
+// @version      2.3
 // @description  Executes code sent by bot when on google meets.
 // @author       GSRHackZ
 // @match        *://*/*
@@ -17,11 +17,18 @@ let min=Number(urlParams.get("min"));
 let on=urlParams.get("on");
 let usedChats=[];
 
-setInterval(function(){
-    if(document.getElementsByClassName("uArJ5e UQuaGc Y5sE8d uyXBBb xKiqt")[0]!==undefined){
-        document.getElementsByClassName("uArJ5e UQuaGc Y5sE8d uyXBBb xKiqt")[0].click();
-    }
-},1000)
+if(on){
+    setInterval(function(){
+        if(document.getElementsByClassName("uArJ5e UQuaGc Y5sE8d uyXBBb xKiqt")[0]!==undefined){
+            document.getElementsByClassName("uArJ5e UQuaGc Y5sE8d uyXBBb xKiqt")[0].click();
+        }
+        if(document.getElementsByClassName("fwk7ze")[0]!==undefined){
+            if(document.getElementsByClassName("fwk7ze")[0].innerText.includes("refresh")){
+                location.reload();
+            }
+        }
+    },1000)
+}
 
 function getCount(){
     if(document.getElementsByClassName("wnPUne N0PJ8e")[0]!==undefined){
