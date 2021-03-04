@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Google Meet Attendance Bot Code Executor
 // @namespace    http://tampermonkey.net/
-// @version      2.4
+// @version      2.6
 // @description  Executes code sent by bot when on google meets.
 // @author       GSRHackZ
-// @match        *://*/*
+// @match        *://meet.google.com/*
 // @grant        none
 // @icon         https://i.ibb.co/YPzxbqv/google-meets-ai-removebg-preview.png
 // ==/UserScript==
