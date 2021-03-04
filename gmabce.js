@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google Meet Attendance Bot Code Executor
 // @namespace    http://tampermonkey.net/
-// @version      2.3
+// @version      2.4
 // @description  Executes code sent by bot when on google meets.
 // @author       GSRHackZ
 // @match        *://*/*
@@ -26,6 +26,9 @@ if(on){
             if(document.getElementsByClassName("fwk7ze")[0].innerText.includes("refresh")){
                 location.reload();
             }
+        }
+        if(document.getElementsByClassName("CRFCdf")[0]!==undefined){
+            location.reload();
         }
     },1000)
 }
